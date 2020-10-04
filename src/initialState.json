@@ -1,0 +1,28 @@
+{
+    "allSkiDays": [
+        {
+            "resort": "Kirkwood",
+            "date": "2020-8-4",
+            "powder": true,
+            "backcontry": false
+        },
+        {
+            "resort": "Snowbird",
+            "date": "2020-8-6",
+            "powder": false,
+            "backcontry": true
+        },
+        {
+            "resort": "Stowe",
+            "date": "2020-8-10",
+            "powder": false,
+            "backcontry": true
+        }
+    ],
+    "goal": 10,
+    "errors": [],
+    "resortNames": {
+        "fetching": false,
+        "suggestions": ["Kirkwood", "Steamboat", "Stowe", "Snowbird"]
+    }
+}
