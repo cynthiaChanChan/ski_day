@@ -7,6 +7,7 @@ import {
     clearError,
     changeSuggestions,
     clearSuggestions,
+    randomGoals,
 } from "./actions";
 import expect from "./expect";
 
@@ -35,3 +36,6 @@ console.log("changeSuggestions() Action Creator Works!");
 store.dispatch(clearSuggestions());
 expect(store.getState().resortNames.suggestions).toEqual([]);
 console.log("clearSuggestions() Action Creator Works!");
+
+store.dispatch(randomGoals());
+store.dispatch(randomGoals());
