@@ -5,11 +5,7 @@
     "main": "index.js",
     "scripts": {
         "suggestions": "./node_modules/.bin/babel-node ./server --port 3333 --delay 500",
-        "start": "webpack-dev-server",
-        "challenge-a": "babel-node ./src/challenges/FETCH_RESORT_NAMES.js",
-        "challenge-b": "babel-node ./src/challenges/CANCEL_FETCHING.js",
-        "challenge-c": "babel-node ./src/challenges/CLEAR_SUGGESTIONS.js",
-        "challenge-d": "babel-node ./src/challenges/CHANGE_SUGGESTIONS.js"
+        "start": "webpack-dev-server"
     },
     "author": "",
     "license": "ISC",
@@ -25,6 +21,7 @@
         "@babel/preset-env": "^7.11.5",
         "cors": "^2.8.5",
         "express": "^4.17.1",
+        "isomorphic-fetch": "^3.0.0",
         "minimist": "^1.2.5",
         "redux": "^4.0.5",
         "redux-thunk": "^2.3.0"
