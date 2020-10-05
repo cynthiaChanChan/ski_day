@@ -1,0 +1,64 @@
+[33mcommit 58a84c062f7d430bc44ab7771228a7ba0b6c7a18[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: cynthiaChanChan <mession01@gmail.com>
+Date:   Mon Oct 5 11:16:41 2020 +0800
+
+    Create a store
+
+[1mdiff --git a/src/index.js b/src/index.js[m
+[1mindex 282aa94..f0e7030 100644[m
+[1m--- a/src/index.js[m
+[1m+++ b/src/index.js[m
+[36m@@ -1,47 +1,20 @@[m
+ import C from "./constants";[m
+ import appReducer from "./store/reducers";[m
+ import initailState from "./initialState.json";[m
+[32m+[m[32mimport { createStore } from "redux";[m
+ [m
+[31m-let state = initailState;[m
+[32m+[m[32mconst store = createStore(appReducer, initailState);[m
+ [m
+[31m-console.log(`[m
+[32m+[m[32mconsole.log("initial state", store.getState());[m
+ [m
+[31m-    initail state[m
+[31m-    =============[m
+[31m-    goal: ${state.goal}[m
+[31m-    resorts: ${JSON.stringify(state.allSkiDays)}[m
+[31m-    fetching: ${state.resortNames.fetching}[m
+[31m-    suggestions: ${state.resortNames.suggestions}[m
+[31m-[m
+[31m-`);[m
+[31m-[m
+[31m-state = appReducer(state, {[m
+[31m-    type: C.SET_GOAL,[m
+[31m-    payload: 2,[m
+[31m-});[m
+[31m-[m
+[31m-state = appReducer(state, {[m
+[32m+[m[32mstore.dispatch({[m
+     type: C.ADD_DAY,[m
+     payload: {[m
+         resort: "Heavenly",[m
+[31m-        date: "2020-8-13",[m
+[32m+[m[32m        date: "2020-08-13",[m
+         powder: true,[m
+         backcountry: false,[m
+     },[m
+ });[m
+ [m
+[31m-state = appReducer(state, {[m
+[31m-    type: C.CHANGE_SUGGESTIONS,[m
+[31m-    payload: ["Heavenly", "Hawaii"],[m
+[31m-});[m
+[31m-[m
+[31m-console.log(`[m
+[31m-[m
+[31m-    next state[m
+[31m-    =============[m
+[31m-    goal: ${state.goal}[m
+[31m-    resorts: ${JSON.stringify(state.allSkiDays)}[m
+[31m-    fetching: ${state.resortNames.fetching}[m
+[31m-    suggestions: ${state.resortNames.suggestions}[m
+[31m-[m
+[31m-`);[m
+[32m+[m[32mconsole.log("next state", store.getState());[m
